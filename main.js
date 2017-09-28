@@ -14,6 +14,11 @@ io.on('connection', function (socket) {
         socket.broadcast.emit("sync", data);
     });
 
+    socket.on('open-video', function (data) {
+        console.log(data);
+        socket.broadcast.emit("open-video", data);
+    });
+
 
 });
 
